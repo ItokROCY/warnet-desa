@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\webController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('akunBaru');
 });
+
+Route::get('/akunBaru', [webController::class, 'akunBaru']);
+Route::get('/tambahBilling', [webController::class, 'tambahBilling']);
+Route::get('/laporanLokal', [webController::class, 'laporanLokal']);
+Route::get('/keuangan', [webController::class, 'keuangan']);
+Route::get('/feedback', [webController::class, 'feedback']);
