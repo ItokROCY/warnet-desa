@@ -7,6 +7,7 @@
     <title>Dashboard Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
 </head>
 
 <body>
@@ -20,10 +21,10 @@
                     <a class="navbar-brand" style="font-weight:bold; color:#4942E4; font-size:25px">Warnet Desa</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" style="color:#27374D; font-weight:bold" href="/akunBaru">Buat Akun Baru</a>
+                    <a class="nav-link active" aria-current="page" style="color:#27374D; font-weight:bold" href="/akunBaru">Buat Akun Baru</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" style="color:#27374D; font-weight:bold" href="/tambahBilling">Tambah Biling</a>
+                    <a class="nav-link" style="color:#27374D; font-weight:bold" href="/tambahBilling">Tambah Biling</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" style="color:#27374D; font-weight:bold"
@@ -31,8 +32,9 @@
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" style="color:#27374D; font-weight:bold" href="/laporanLokal">Laporan PC
                                 lokal</a></li>
-                        <li><a class="dropdown-item" style="color:#27374D; font-weight:bold" href="/keuangan">Laporan
+                        <li><a class="dropdown-item" style="color:#27374D; font-weight:bold" href="keuangan">Laporan
                                 Keuangan</a></li>
+                        <li><a class="dropdown-item" style="color:#27374D; font-weight:bold" href="/hapusAkun">Hapus User</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
@@ -45,13 +47,31 @@
             </form>
     </nav>
     </nav>
-
+    
     {{-- isi content --}}
 
-    <div class="container md-5">
-        <h1>Tambah Billing here</h1>
-    
-        </div>
+    <div class="container mt-5">
+        <h2>Tambah Username Pelanggan Baru</h2>
+        <br>
+        <label style="font-weight:bold">Masukan Username</label>
+        <div class="input-group mb-3 mt-2">
+            <input type="text" class="form-control" placeholder="Username" aria-label="#" aria-describedby="button-addon2">
+          </div>
+        
+          <label style="font-weight:bold">Masukan Email</label>
+          <div class="input-group mb-3 mt-2">
+            <input type="text" class="form-control" placeholder="example@example.com" aria-label="#" aria-describedby="button-addon2">
+          </div>
+
+          <label for="inputPassword5" class="form-label" style="font-weight:bold">Password</label>
+          <div class="input-group mb-3 mt-2">
+            <input type="password" class="form-control" placeholder="Masukan Password" aria-label="#" aria-describedby="button-addon2">
+          </div>
+          <br>
+          <button type="button" class="btn btn-success d-flex justify-content-end">Daftarkan</button>
+    </div>
+
+
 
 
 

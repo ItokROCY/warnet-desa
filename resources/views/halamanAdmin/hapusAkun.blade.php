@@ -33,6 +33,7 @@
                                 lokal</a></li>
                         <li><a class="dropdown-item" aria-current="active" style="color:#27374D; font-weight:bold" href="/keuangan">Laporan
                                 Keuangan</a></li>
+                                <li><a class="dropdown-item" style="color:#27374D; font-weight:bold" href="/hapusAkun">Hapus User</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
@@ -49,7 +50,7 @@
     {{-- isi content --}}
 
     <div class="container md-5">
-        <h1>Laporan Keuangan here</h1>
+        <h1>hapus akun</h1>
     
         </div>
     

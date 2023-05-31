@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\webController;
+use App\Http\Controllers\adminController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,8 +18,9 @@ Route::get('/', function () {
     return view('akunBaru');
 });
 
-Route::get('/akunBaru', [webController::class, 'akunBaru']);
-Route::get('/tambahBilling', [webController::class, 'tambahBilling']);
-Route::get('/laporanLokal', [webController::class, 'laporanLokal']);
-Route::get('/keuangan', [webController::class, 'keuangan']);
-Route::get('/feedback', [webController::class, 'feedback']);
+Route::get('/akunBaru', [adminController::class, 'akunBaru']);
+Route::get('/tambahBilling', [adminController::class, 'tambahBilling']);
+Route::get('/laporanLokal', [adminController::class, 'laporanLokal']);
+Route::get('/keuangan', [adminController::class, 'keuangan']);
+Route::get('/feedback', [adminController::class, 'feedback']);
+Route::get('/hapusAkun', [adminController::class, 'hapusAkun']);

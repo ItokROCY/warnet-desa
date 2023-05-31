@@ -29,10 +29,11 @@
                     <a class="nav-link dropdown-toggle" style="color:#27374D; font-weight:bold"
                         data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Menu Admin</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" aria-current="active" style="color:#27374D; font-weight:bold" href="/laporanLokal">Laporan PC
+                        <li><a class="dropdown-item" style="color:#27374D; font-weight:bold" href="/laporanLokal">Laporan PC
                                 lokal</a></li>
-                        <li><a class="dropdown-item" style="color:#27374D; font-weight:bold" href="/keuangan">Laporan
+                        <li><a class="dropdown-item" aria-current="active" style="color:#27374D; font-weight:bold" href="/keuangan">Laporan
                                 Keuangan</a></li>
+                                <li><a class="dropdown-item" style="color:#27374D; font-weight:bold" href="/hapusAkun">Hapus User</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
@@ -45,13 +46,14 @@
             </form>
     </nav>
     </nav>
-    
+
     {{-- isi content --}}
 
     <div class="container md-5">
-    <h1>Laporan PC here</h1>
-
-    </div>
+        <h1>Laporan Keuangan here</h1>
+    
+        </div>
+    
 
 
 
