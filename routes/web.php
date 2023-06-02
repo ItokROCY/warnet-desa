@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('akunBaru');
+    return view('halamanAdmin.akunBaru');
 });
 
 Route::get('/akunBaru', [adminController::class, 'akunBaru']);

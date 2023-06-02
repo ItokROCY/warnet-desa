@@ -28,11 +28,11 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" style="color:#27374D; font-weight:bold"
-                        data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Menu Admin</a>
+                    data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Menu Admin</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" style="color:#27374D; font-weight:bold" href="/laporanLokal">Laporan PC
-                                lokal</a></li>
-                        <li><a class="dropdown-item" style="color:#27374D; font-weight:bold" href="keuangan">Laporan
+                            lokal</a></li>
+                            <li><a class="dropdown-item" style="color:#27374D; font-weight:bold" href="keuangan">Laporan
                                 Keuangan</a></li>
                         <li><a class="dropdown-item" style="color:#27374D; font-weight:bold" href="/hapusAkun">Hapus User</a></li>
                         <li>
@@ -43,6 +43,7 @@
                 </li>
             </ul>
             <form class="d-flex justify-content-end">
+                <a class="navbar-brand" style="font-weight:bold; color:#000000; font-size:25px">Dashboard Admin</a>
                 <button class="btn btn-danger" type="logout">Logout</button>
             </form>
     </nav>
