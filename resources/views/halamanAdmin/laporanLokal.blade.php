@@ -9,10 +9,10 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 
-<body>
+<body style="background-color:#1E4174">
 
 {{-- header navbar --}}
-    <nav class="navbar" style="background-color: #ECF8F9;">
+    <nav class="navbar" style="background-color: #DDA94B;">
         <div class="container-fluid">
             <ul class="nav nav-underline">
                 <li class="nav-item">
@@ -20,20 +20,20 @@
                     <a class="navbar-brand" style="font-weight:bold; color:#4942E4; font-size:25px">Warnet Desa</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" style="color:#27374D; font-weight:bold" href="/akunBaru">Buat Akun Baru</a>
+                    <a class="nav-link" style="color:#1E4174; font-weight:bold" href="/akunBaru">Buat Akun Baru</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" style="color:#27374D; font-weight:bold" href="/tambahBilling">Tambah Biling</a>
+                    <a class="nav-link" style="color:#1E4174; font-weight:bold" href="/tambahBilling">Tambah Biling</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" style="color:#27374D; font-weight:bold"
+                    <a class="nav-link dropdown-toggle" style="color:#1E4174; font-weight:bold"
                         data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Menu Admin</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" aria-current="active" style="color:#27374D; font-weight:bold" href="/laporanLokal">Laporan PC
+                        <li><a class="dropdown-item" aria-current="active" style="color:#1E4174; font-weight:bold" href="/laporanLokal">Laporan PC
                                 lokal</a></li>
-                        <li><a class="dropdown-item" style="color:#27374D; font-weight:bold" href="/keuangan">Laporan
+                        <li><a class="dropdown-item" style="color:#1E4174; font-weight:bold" href="/keuangan">Laporan
                                 Keuangan</a></li>
-                                <li><a class="dropdown-item" style="color:#27374D; font-weight:bold" href="/hapusAkun">Hapus User</a></li>
+                                <li><a class="dropdown-item" style="color:#1E4174; font-weight:bold" href="/hapusAkun">Hapus User</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
@@ -42,7 +42,7 @@
                 </li>
             </ul>
             <form class="d-flex justify-content-end">
-                <a class="navbar-brand" style="font-weight:bold; color:#000000; font-size:25px">Dashboard Admin</a>
+                <a class="navbar-brand" style="font-weight:bold; color:white; font-size:25px">Dashboard Admin</a>
                 <button class="btn btn-danger" type="logout">Logout</button>
             </form>
     </nav>
@@ -51,9 +51,11 @@
     {{-- isi content --}}
 
     <div class="container md-5">
-    <h1>Laporan PC here</h1>
+        <br>
+    <h1 style="color:white; font-weight:bolder">Laporan PC here</h1>
+    <br>
 
-    
+
 
     </div>
 

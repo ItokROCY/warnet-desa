@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\adminController;
+use App\Http\Controllers\sessionController;
+use App\Http\Controllers\userController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,9 +20,20 @@ Route::get('/', function () {
     return view('halamanAdmin.akunBaru');
 });
 
+// web navigation
+// admin page
 Route::get('/akunBaru', [adminController::class, 'akunBaru']);
 Route::get('/tambahBilling', [adminController::class, 'tambahBilling']);
 Route::get('/laporanLokal', [adminController::class, 'laporanLokal']);
 Route::get('/keuangan', [adminController::class, 'keuangan']);
 Route::get('/feedback', [adminController::class, 'feedback']);
 Route::get('/hapusAkun', [adminController::class, 'hapusAkun']);
+
+// user page
+Route::get('/userPage', [userController::class, 'userPage']);
+Route::get('/buyPage', [userController::class, 'buyPage']);
+
+
+// login session
+Route::get('/index', [sessionController::class, 'index']);
+Route::get('/adminLogin', [sessionController::class, 'adminLogin']);
