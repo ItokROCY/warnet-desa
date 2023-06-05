@@ -42,7 +42,7 @@
                 </li>
             </ul>
             <form class="d-flex justify-content-end">
-                <a class="navbar-brand" style="font-weight:bold; color:#000000; font-size:25px">Dashboard Admin</a>
+                <a class="navbar-brand" style="font-weight:bold; color:white; font-size:25px">Dashboard Admin</a>
                 <button class="btn btn-danger" type="logout">Logout</button>
             </form>
     </nav>

@@ -58,7 +58,9 @@
             <input type="text" class="form-control" placeholder="Username" aria-label="#" aria-describedby="button-addon2">
           </div>
           <br>
-          <h2 class="font-weight:bold" style="color:#DDA94B">Pilih Paket Billing</h2>
+          <div class="box colo">
+            <div style=" background-color: #DDA94B; padding: 20px ; border-radius:10px">
+          <h2 class="font-weight:bold" style="color:white; font-weight:bolder" align="center">Pilih Paket Billing</h2>
           <br>
           <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
@@ -121,6 +123,8 @@
                 </div>
               </div>
             </div>
+          </div>
+          </div>
           </div>
     </div>
 
