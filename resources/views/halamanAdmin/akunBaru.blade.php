@@ -54,30 +54,31 @@
     <div class="container mt-5">
         <h2 style="color:#DDA94B; font-weight:bolder">Tambah Username Pelanggan Baru</h2>
         <br>
+        <form action="/addakun" method="post">
+            @csrf
         <label style="font-weight:bold; color:white" >Masukan Username</label>
         <div class="input-group mb-3 mt-2">
-            <input type="text" class="form-control" placeholder="Username" aria-label="#" aria-describedby="button-addon2">
+            <input type="text" class="form-control" placeholder="Username" aria-label="#" aria-describedby="button-addon2" name="name">
           </div>
         <br>
-          <label style="font-weight:bold; color:white"">Masukan Email</label>
+          <label style="font-weight:bold; color:white">Masukan Email</label>
           <div class="input-group mb-3 mt-2">
-            <input type="text" class="form-control" placeholder="example@example.com" aria-label="#" aria-describedby="button-addon2">
+            <input type="text" class="form-control" placeholder="example@example.com" aria-label="#" aria-describedby="button-addon2" name="email">
           </div>
 
-          <label for="inputPassword5" class="form-label" style="font-weight:bold; color:white"">Password</label>
+          <label for="inputPassword5" class="form-label" style="font-weight:bold; color:white">Password</label>
           <div class="input-group mb-3 mt-2">
-            <input type="password" class="form-control" placeholder="Masukan Password" aria-label="#" aria-describedby="button-addon2">
+            <input type="password" class="form-control" placeholder="Masukan Password" aria-label="#" aria-describedby="button-addon2" name="password">
           </div>
           <br>
-          <button type="button" class="btn btn-success d-flex justify-content-end">Daftarkan</button>
+          <label style="font-weight:bold; color:white" >Masukan Biling</label>
+        <div class="input-group mb-3 mt-2">
+            <input type="text" class="form-control" placeholder="Billing" aria-label="#" aria-describedby="button-addon2" name="billing">
+          </div>
+          <br>
+          <button type="submit" class="btn btn-success d-flex justify-content-end">Daftarkan</button>
+          </form>
     </div>
-
-
-
-
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
