@@ -59,6 +59,12 @@
           </div>
           <br>
           <h2 class="font-weight:bold" style="color:#DDA94B">Daftar user</h2>
+
+          <div class="box colo">
+            <div style=" background-color: #DDA94B; padding: 20px ; border-radius:10px">
+          <h2 class="font-weight:bold" style="color:white; font-weight:bolder" align="center">Pilih Paket Billing</h2>
+
+
           <br>
           <div class="row row-cols-1 row-cols-md-3 g-4" style="margin-bottom: 50px">
             @foreach ($users as $user)
@@ -74,6 +80,9 @@
             </div>
             @endforeach
           </div>
+          </div>
+          </div>
+    </div>
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
