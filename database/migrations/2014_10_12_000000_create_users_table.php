@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('billing')->default(0);
             $table->string('role')->default('customer');
+            $table->integer('bayar')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });

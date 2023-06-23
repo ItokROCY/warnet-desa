@@ -63,9 +63,9 @@
           <label style="font-weight:bold; color:white" >Masukan PC</label>
           <select class="form-select" name="PC" aria-label="Default select example">
             <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            @for ($i = 1; $i <= 12; $i++)
+            <option value="{{$i}}">{{$i}}</option>
+            @endfor
           </select>
           <br>
           <button type="submit" class="btn btn-success d-flex justify-content-end">Daftarkan</button>

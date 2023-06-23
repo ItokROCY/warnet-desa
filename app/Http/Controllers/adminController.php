@@ -17,26 +17,47 @@ class adminController extends Controller
         $users = User::find($id);
         return view('halamanAdmin.popup', compact('users'));
     }
-    function updatebilling(Request $request, $id){
-        // $users = User::find($id);
-        // $currentBilling = $users->billing; 
-        // $newBilling = $currentBilling + $request->input('billing');
-        // $users->update(['billing' => $newBilling]); 
-        // return redirect('/tambahBilling');
+    function updatebilling(Request $request, $id)
+{
+    $users = User::find($id);
 
-        $users = User::find($id);
+    // Check if the PC number is already associated with another user
+    $existingKomputer = Komputer::where('PC', $request->input('PC'))->first();
 
+    if ($existingKomputer && $existingKomputer->user_id != $users->id) {
+        // PC number is already used by another user, return an error response
+        return response()->json(['error' => 'PC sudah terpakai. Silahkan gunakan PC yang lain'], 422);
+    }
+
+    // Check if the user already has a PC with the specified number
+    $komputer = $users->komputer()->where('PC', $request->input('PC'))->first();
+
+    if ($komputer) {
+        // Update the billing for the existing PC
+        $currentBilling = $komputer->user->billing;
+        $newBilling = $currentBilling + $request->input('billing');
+        $komputer->user->update(['billing' => $newBilling]);
+    } else {
         // Create a new komputer entry and associate it with the user
         $komputer = new Komputer();
         $komputer->PC = $request->input('PC');
-        $komputer->user_id = $users->id;
-        $komputer->save();
-    
+        $users->komputer()->save($komputer);
+
+        // Update the billing for the user
         $currentBilling = $users->billing;
         $newBilling = $currentBilling + $request->input('billing');
         $users->update(['billing' => $newBilling]);
-        return redirect('/tambahBilling');
     }
+
+    // Increase user->bayar attribute
+    $users->bayar += $request->input('billing') * 1000;
+    $users->save();
+
+    return redirect('/tambahBilling');
+}
+
+
+
     function akunBaru(){
         return view('halamanAdmin.akunBaru');
     }
@@ -56,11 +77,15 @@ class adminController extends Controller
     }
     function laporanLokal(){
         $komputers= komputer::with('user')->get();
-        return view('halamanAdmin.laporanLokal', compact('komputers'));
+        $ruangan1 = array('A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11', 'A12');
+        return view('halamanAdmin.laporanLokal', compact('komputers', 'ruangan1'));
     }
     
     function keuangan(){
-        return view('halamanAdmin.keuangan');
+        $laporans = User::all();
+        $i = 1;
+        $total_tarif = User::sum('bayar');
+        return view('halamanAdmin.keuangan', compact('laporans', 'i', 'total_tarif'));
     }
 
     function feedback(){
