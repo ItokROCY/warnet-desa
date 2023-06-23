@@ -57,6 +57,29 @@
 
 
 
+    <div class="row">
+        @foreach($komputers as $komputer)
+        <!-- #f8f8f6 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+            <a href="#" class="card-link" data-toggle="modal">
+                <div class="card h-100" style="border-radius: 5%; background-color: black;">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div class="text-center mb-3">
+                        </div>
+                        <div class="mb-3">
+                            <h5 class="card-title" style="color: #f8f8f6">PC Costumer {{ $komputer->PC }}</h5>
+                            <p class="card-text" style="color: #f8f8f6">{{ $komputer->user->name }}</p>
+                            <p class="card-text" style="color: #f8f8f6">{{ $komputer->user->billing }} GB</p>
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn-primary btn-outline-light btn-block">Beli</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        @endforeach
+
     </div>
 
 

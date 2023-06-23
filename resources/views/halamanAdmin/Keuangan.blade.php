@@ -53,6 +53,32 @@
     <div class="container md-5">
         <br>
         <h1 style="color:white; font-weight:bolder">Laporan Keuangan here</h1>
+
+
+        <table class="table table-success table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+    </tr>
+  </thead>
+  <tbody>
+  @foreach ($laporans as $laporan)
+    <tr>
+      <th scope="row">{{ $i }}</th>
+      <td>{{ $laporan->name }}</td>
+      <td>{{ $laporan->bayar }}</td>
+    </tr>
+    <?php $i++; ?>
+    @endforeach
+    <tr>
+        <td>Total</td>
+        <td></td>
+        <td>{{ $total_tarif }}</td>
+    </tr>
+  </tbody>
+</table>
     
         </div>
     

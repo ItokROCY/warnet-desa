@@ -11,6 +11,7 @@
 
 <body style="background-color:#1E4174">
 
+
 {{-- header navbar --}}
     <nav class="navbar" style="background-color: #DDA94B;">
         <div class="container-fluid">
@@ -20,7 +21,7 @@
                     <a class="navbar-brand" style="font-weight:bold; color:#4942E4; font-size:25px">Warnet Desa</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" style="color:#1E4174; font-weight:bold" href="/akunBaru">Buat Akun Baru</a>
+                    <a class="nav-link" aria-current="page" style="color:#1E4174; font-weight:bold" href="/">Buat Akun Baru</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" style="color:#1E4174; font-weight:bold" href="/tambahBilling">Tambah Biling</a>
@@ -51,90 +52,39 @@
     {{-- isi content --}}
 
     <div class="container mt-5">
-        <h2 style="color:#DDA94B; font-weight:bolder">Tambah Paket Billing</h2>
-        <br>
-        <label style="font-weight:bold; color:white">Masukan Username</label>
+        <h2 style="color:#DDA94B; font-weight:bolder">Search</h3>
+        <!-- <label style="font-weight:bold; color:white">Masukan Username</label> -->
         <div class="input-group mb-3 mt-2">
-            <input type="text" class="form-control" placeholder="Username" aria-label="#" aria-describedby="button-addon2">
+            <input type="text" class="form-control" placeholder="Search" aria-label="#" aria-describedby="button-addon2">
           </div>
           <br>
+          <h2 class="font-weight:bold" style="color:#DDA94B">Daftar user</h2>
+
           <div class="box colo">
             <div style=" background-color: #DDA94B; padding: 20px ; border-radius:10px">
           <h2 class="font-weight:bold" style="color:white; font-weight:bolder" align="center">Pilih Paket Billing</h2>
+
+
           <br>
-          <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="row row-cols-1 row-cols-md-3 g-4" style="margin-bottom: 50px">
+            @foreach ($users as $user)
             <div class="col">
               <div class="card">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">Paket A</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <button type="button" class="btn btn-success">Tambah Paket</button>
+                  <h5 class="card-title">{{ $user->name }}</h5>
+                  <p class="card-text">sisa billing : {{ $user->billing}} GB</p>
+                <a href="/addbilling/{{$user->id}}"><button type="submit" class="btn btn-success">Tambah Paket</button></a> 
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Paket B</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <button type="button" class="btn btn-success">Tambah Paket</button>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Paket C</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <button type="button" class="btn btn-success">Tambah Paket</button>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Paket D</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <button type="button" class="btn btn-success">Tambah Paket</button>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Paket E</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <button type="button" class="btn btn-success">Tambah Paket</button>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Paket F</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <button type="button" class="btn btn-success">Tambah Paket</button>
-                </div>
-              </div>
-            </div>
+            @endforeach
           </div>
           </div>
           </div>
     </div>
 
-    
-
-
-
-
-
-
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
     </script>
