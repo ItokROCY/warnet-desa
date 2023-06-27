@@ -10,21 +10,21 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
 </head>
 
-<body style="background-image: url('img/yaemiko.png'); background-size:cover ">
+<body style="background-color:#1E4174">
 
 {{-- header navbar --}}
-    <nav class="navbar" style="background-color: #ECF8F9;">
-        <div class="container-fluid">
-            <ul class="nav nav-underline">
+<nav class="navbar" style="background-color: #DDA94B;">
+    <div class="container-fluid">
+        <ul class="nav nav-underline">
+            <li class="nav-item">
+                <img src="{{ URL::asset('img/computer_svgrepo.com.svg') }}" alt="Logo" width="40" height="35" class="mt-0">
+                <a class="navbar-brand" style="font-weight:bold; color:#1E4174; font-size:25px">Warnet Desa</a>
+            </li>
                 <li class="nav-item">
-                    <img src="{{ URL::asset('img/computer_svgrepo.com.svg') }}" alt="Logo" width="40" height="35" class="mt-0">
-                    <a class="navbar-brand" style="font-weight:bold; color:#4942E4; font-size:25px">Warnet Desa</a>
+                    <a class="nav-link active" aria-current="page" style="color:#1E4174; font-weight:bold" href="/userPage">Menu utama</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" style="color:#27374D; font-weight:bold" href="/userPage">Menu utama</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" style="color:#27374D; font-weight:bold" href="/buyPage">Tambah Biling</a>
+                    <a class="nav-link" style="color:#1E4174; font-weight:bold" href="/buyPage">Tambah Biling</a>
                 </li>
             </ul>
             <form class="d-flex justify-content-end" action="/logout" method="post">
@@ -39,7 +39,7 @@
 
     <div class="container mt-5">
         <h1 style="font-weight:bold;color:#ECF8F9">Hallo {{ Auth::user()->name }}, Selamat Datang di Layanan Warnet Desa</h1>
-        <h1 style="font-weight:bold;color:#ECF8F9">Sisa {{ Auth::user()->billing }} GB</h1>
+        <h4 style="font-weight:bold;color:#ECF8F9">Sisa {{ Auth::user()->billing }} GB</h4>
 
     </div>
 

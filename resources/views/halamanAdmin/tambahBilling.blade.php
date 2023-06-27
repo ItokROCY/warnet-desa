@@ -70,7 +70,6 @@
             @foreach ($users as $user)
             <div class="col">
               <div class="card">
-                <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">{{ $user->name }}</h5>
                   <p class="card-text">sisa billing : {{ $user->billing}} GB</p>
